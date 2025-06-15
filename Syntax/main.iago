@@ -1,0 +1,32 @@
+@use: <math.igbo> as math;
+@import: <program.iago>
+
+@define: MAX, 100;
+
+int = counter::0;
+str = message::"System Initialized";
+float = pi::3.1415, gravity::#;
+
+int func main <- () {
+    int = x::5, y::10;
+    float = result::#;
+
+    call()->printout("%s", message);
+    result = call()->math::multiply(x::$, y::$);
+
+    match result {
+        0 => call()->printout("Result is zero"),
+        1 => call()->printout("Result is one"),
+        _ => call()->printout("Result is other"),
+    }
+    @return <- 0;
+}
+
+int func loop_example <- () {
+    int = i::0;
+    str = word::"Hello World!";
+    for (int i::0, world, i++) {
+        call()->printout(world[i]);
+    }
+    @return <- 0;
+}
