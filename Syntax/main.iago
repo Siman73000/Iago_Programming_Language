@@ -1,4 +1,5 @@
-@use: <math.igbo> as math;
+@use: <math.ighf> as math
+@use: <std-library.ighf>
 @import: <program.iago>
 
 @define: MAX, 100;
