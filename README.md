@@ -2,7 +2,7 @@
 
 Iago is the integrated low level programming language for the Othello operating system.
 
-##Details
+## Details
 
 Low level language that compiles down to machine code.
 Compatible on Windows, Linux, and MacOS.
