@@ -15,12 +15,24 @@ typedef enum {
     TOKEN_FUNC,
     TOKEN_ARROW_ASSIGN,    // <-
     TOKEN_DOUBLE_COLON,    // ::
+    TOKEN_LBRACKET,       // [
+    TOKEN_RBRACKET,       // ]
+    TOKEN_COLON,          // :
+    TOKEN_MINUS,          // -
+    TOKEN_EQUAL,          // =
+    TOKEN_ARROW,          // ->
+    TOKEN_DOT,            // .
+    TOKEN_PLUSPLUS,       // ++
+    TOKEN_FOR,            // for
+    TOKEN_UNDERSCORE,     // _
+    TOKEN_HASH,           // #
+    TOKEN_DOLLAR,          // $
     TOKEN_LPAREN,          // (
     TOKEN_RPAREN,          // )
     TOKEN_LBRACE,          // {
     TOKEN_RBRACE,          // }
-    TOKEN_COMMA,
-    TOKEN_SEMICOLON,
+    TOKEN_COMMA,           // ,
+    TOKEN_SEMICOLON,       // ;
     TOKEN_STRING,
     TOKEN_ANGLE_STRING,
     TOKEN_NUMBER,
@@ -35,6 +47,7 @@ typedef struct {
     char* text;
 } Token;
 
+Token next_token(const char* src, int* index);
 
 
 #endif

@@ -24,8 +24,9 @@ int func main <- () {
 }
 
 int func loop_example <- () {
-    int = i::0;
     str = word::"Hello World!";
+    \\ executes world[i] for each index in "word" i.e.
+    \\ the program prints 'H' then 'e' etc. until it reaches the end of world[i] which is = to 12.
     for (int i::0, world, i++) {
         call()->printout(world[i]);
     }

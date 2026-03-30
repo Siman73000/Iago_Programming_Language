@@ -1,0 +1,51 @@
+Warning: skipping unsupported statement starting at MATCH ('match')
+Warning: skipping unsupported statement starting at UNKNOWN ('\')
+=== AST ===
+PROGRAM
+  VAR_DECL text="int" data_type=TYPE_INT
+    BINDING text="counter"
+      NUMBER text="0"
+  VAR_DECL text="str" data_type=TYPE_STR
+    BINDING text="message"
+      STRING text="System Initialized"
+  VAR_DECL text="float" data_type=TYPE_FLOAT
+    BINDING text="pi"
+      NUMBER text="3.1415"
+    BINDING text="gravity"
+      IDENTIFIER text="#"
+  FUNC_DECL text="main" data_type=TYPE_INT
+    BLOCK
+      VAR_DECL text="int" data_type=TYPE_INT
+        BINDING text="x"
+          NUMBER text="5"
+        BINDING text="y"
+          NUMBER text="10"
+      VAR_DECL text="float" data_type=TYPE_FLOAT
+        BINDING text="result"
+          IDENTIFIER text="#"
+      EXPR_STMT
+        CALL
+          ACCESS text="printout" data_type=ARROW
+            CALL
+              IDENTIFIER text="call"
+          STRING text="%s"
+          IDENTIFIER text="message"
+      ASSIGN text="result"
+        CALL
+          ACCESS text="multiply" data_type=DOUBLE_COLON
+            ACCESS text="math" data_type=ARROW
+              CALL
+                IDENTIFIER text="call"
+          ACCESS text="$" data_type=DOUBLE_COLON
+            IDENTIFIER text="x"
+          ACCESS text="$" data_type=DOUBLE_COLON
+            IDENTIFIER text="y"
+      RETURN
+        NUMBER text="0"
+  FUNC_DECL text="loop_example" data_type=TYPE_INT
+    BLOCK
+      VAR_DECL text="str" data_type=TYPE_STR
+        BINDING text="word"
+          STRING text="Hello World!"
+      RETURN
+        NUMBER text="0"
